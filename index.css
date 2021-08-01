@@ -1,0 +1,117 @@
+@font-face {
+    font-family: lato;
+    src: url(Fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+font-family: regular;
+src: url(Fonts/Lato-Italic.ttf);
+}
+
+*{
+margin: 0;
+padding: 0;
+font-family: lato;
+}
+
+.header {
+background-color: #f8dd83;
+width: 100%;
+height: 100vh;
+}
+
+/* el "justify-content: space-aorund" a parte de separarlos los centra ya que le pusimos un ancho al navabar */
+.navbar {
+width: 100%;
+display: flex;
+height: 15vh;
+justify-content: space-around;
+
+}
+
+.contenedor-imag {
+width: 5%;
+
+}
+
+.imagen {
+width: 200px;
+height: 115px;
+
+}
+
+/* "list-style: none" le saca los items a las tres opciones */
+/* "align-items: center" centra los items en el nav */
+.ul-nav {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 20%;
+height: 100%;
+align-items: center;
+margin-right: 15%;
+}
+
+/* es importante que siempre lleve el # antes de poner el color para que te lo busque */
+.li-nav {
+color: #0c4ea2;
+font-weight: 600;
+}
+
+/* Aca estamos haciendo referencia a todos los que tienen el elemento "a" en los items */
+/* con "text-decoration: none" sacamos el subrayado de los items */
+/* con "color: inherit" vuelve al color que le habiamos asignado ya que la etiqueta "a" tiene colores por defecto  */
+.li-nav a {
+text-decoration: none;
+color: inherit;
+}
+
+.carrito {
+margin-left: 10px;
+}
+
+.imagen-2 {
+width: 300px;
+height: 150px;
+}
+
+/* Le dimos 85vh ya que al nav le habiamos dado 15vh sino se pasa del 100% de la pantalla  */
+.contenedor-header {
+height: 70vh;    
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.titulo-imag {
+width: 30%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.contenedor-img-pika {
+width: 20%;
+
+}
+
+.titulo-imag h3 {
+font-weight: 400;
+font-size: 1.2rem;
+font-family: regular;
+}
+
+/* "text-transform: uppercase" hace que se ponga en mayuscula el escrito */
+/* "letter-spacing" hace espacios entre las letras */
+.btn-atrapar {
+height: 50px;
+background-color: #0c4ea2;
+border-radius: 10px;
+color: white;
+text-transform: uppercase;
+margin: 10%;
+padding: 5px;
+letter-spacing: 2px;
+}

@@ -30,13 +30,13 @@ justify-content: space-around;
 }
 
 .contenedor-imag {
-width: 5%;
+width: 20%;
 
 }
 
 .imagen {
-width: 200px;
-height: 115px;
+width: 80%;
+height: 70%;
 
 }
 
@@ -46,11 +46,11 @@ height: 115px;
 list-style: none;
 display: flex;
 flex-wrap: wrap;
-justify-content: space-between;
-width: 20%;
+justify-content: space-around;
+width: 35%;
 height: 100%;
 align-items: center;
-margin-right: 15%;
+
 }
 
 /* es importante que siempre lleve el # antes de poner el color para que te lo busque */
@@ -98,6 +98,7 @@ width: 20%;
 }
 
 .titulo-imag h3 {
+margin-top: 3%;
 font-weight: 400;
 font-size: 1.2rem;
 font-family: regular;
@@ -114,4 +115,63 @@ text-transform: uppercase;
 margin: 10%;
 padding: 5px;
 letter-spacing: 2px;
+}
+
+.about {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #0c4ea2;
+width: 100%;
+height: 85vh;
+flex-direction: column;
+}
+
+.tittle-about {
+text-transform: uppercase;
+font-size: 4rem;
+color: #f8dd83;
+}
+
+.p-about {
+color: #f8dd83;
+}
+
+.container-caracteristicas {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 60%;
+margin-top: 5%;
+flex-wrap: wrap;
+}
+
+.img1 {
+width: 75px;
+height: 100px;
+}
+
+.img2 {
+width: 75px;
+height: 100px;
+}
+
+.img3 {
+width: 75px;
+height: 100px;
+}
+
+.container-caracteristica {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 30%;
+}
+
+.container-caracteristica p {
+color: white;
+margin-top: 5%;
+font-size: 0.8rem;
+text-align: center;
 }

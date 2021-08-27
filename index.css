@@ -26,7 +26,7 @@ width: 100%;
 display: flex;
 height: 15vh;
 justify-content: space-around;
-
+flex-wrap: wrap;
 }
 
 .contenedor-imag {
@@ -67,6 +67,12 @@ text-decoration: none;
 color: inherit;
 }
 
+/* con el ":hover" hacemos en este caso que se subraye ele lemneto en azul y que sea blanco." */
+.li-nav a:hover {
+color: white;
+border-bottom: #0c4ea2 4px solid ;
+}
+
 .carrito {
 margin-left: 10px;
 }
@@ -82,6 +88,7 @@ height: 70vh;
 display: flex;
 justify-content: space-around;
 align-items: center;
+flex-wrap: wrap;
 }
 
 .titulo-imag {
@@ -97,58 +104,69 @@ width: 20%;
 
 }
 
+/* con este filtro cada vez que se apoya el mouse encima de la imagen se satura. este esta dentro de los hoovers */
+/* a parte del filter tambien esta el "transform: scale" que hace que la imagen se agrande cuando se apoya el mouse arriba */
+.imag-pika:hover {
+    filter: saturate(80%);
+}
+
 .titulo-imag h3 {
-margin-top: 3%;
-font-weight: 400;
-font-size: 1.2rem;
-font-family: regular;
+    margin-top: 3%;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: regular;
 }
 
 /* "text-transform: uppercase" hace que se ponga en mayuscula el escrito */
 /* "letter-spacing" hace espacios entre las letras */
 .btn-atrapar {
-height: 50px;
-background-color: #0c4ea2;
-border-radius: 10px;
-color: white;
-text-transform: uppercase;
-margin: 10%;
-padding: 5px;
-letter-spacing: 2px;
+    height: 50px;
+    background-color: #0c4ea2;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    margin: 10%;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+.btn-atrapar:hover {
+    background-color: black;
+
 }
 
 .about {
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #0c4ea2;
-width: 100%;
-height: 85vh;
-flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c4ea2;
+    width: 100%;
+    height: 85vh;
+    flex-direction: column;
 }
 
 .tittle-about {
-text-transform: uppercase;
-font-size: 4rem;
-color: #f8dd83;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: #f8dd83;
 }
 
 .p-about {
-color: #f8dd83;
+    color: #f8dd83;
 }
 
 .container-caracteristicas {
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 60%;
-margin-top: 5%;
-flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin-top: 5%;
+    flex-wrap: wrap;
 }
 
 .img1 {
-width: 75px;
-height: 100px;
+    width: 75px;
+    height: 100px;
 }
 
 .img2 {
@@ -157,21 +175,283 @@ height: 100px;
 }
 
 .img3 {
-width: 75px;
-height: 100px;
+    width: 75px;
+    height: 100px;
 }
 
 .container-caracteristica {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
 }
 
 .container-caracteristica p {
-color: white;
-margin-top: 5%;
-font-size: 0.8rem;
+    color: white;
+    margin-top: 5%;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.list-pedis {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.tittle-list-pedis {
+    color: #0c4ea2;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: lato;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.container-cards2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 40px;
+}
+
+/* Poniendole un "min-height", la altura de las cards, menos que eso no se van a achicar */
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 350px;
+    border-radius: 30px;
+    box-shadow: 7px 4px 38px 9px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 7px 4px 38px 9px rgba(0,0,0,0.4);
+    -moz-box-shadow: 7px 4px 38px 9px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+    align-items: center;
+    min-height: 200px;
+}
+
+.imag-pikaa {
+    width: 80%;
+    margin-left: 20px;
+    margin-top: 5%;
+}
+
+.nombre-poke {
+    text-transform: uppercase;
+    color: #0c4ea2;
+    font-size: 1.4rem;
+    font-family: lato;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.precio-poke {
+    color: #0c4ea2;
+    font-size: 2.4rem;
+    font-family: lato;
+    text-align: center;
+}
+
+/* con el "border: none" le saca el borde al botón */
+/* esta transicion para que vaya cambiandod e color de a poco */
+.boton-poke {
+    margin-top: 5px;
+    background-color: #f8dd83;
+    border-radius: 8px;
+    width: 65%;
+    height: 40px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-family: regular;
+    transition: all 150ms ease-in;
+    border: none;
+}
+
+/* "cursor:pointer" cuando pasas con el mouse se pone la manito */
+.boton-poke:hover {
+    background-color: #0c4ea2;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (max-width: 950px) and (min-width: 600px) {
+    .cards {
+        width: 40%;
+        height: 400px;
+    }
+        .
+
+}
+
+@media (max-width: 800px) and (min-width: 600px)  {
+  .ul-nav {
+      width: 40%;
+  } 
+
+  .list-pedis h2 {
+      text-align: center;
+      font-size: 1.8rem;
+  }
+
+
+}
+
+@media (max-width: 600px) and (min-width: 465px) {
+/* Con este elemento se oculta cualquier cosa */
+/* Si queriamos que el pikacho este en el header habia que agrandar su altura */
+    .contenedor-img-pika {
+
+        display: none;
+    }
+
+    .list-pedis h2 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+  
+    .cards {
+        width: 40%;
+        height: 350px;
+    }
+    
+}
+
+@media (max-width: 465px) {
+    .contenedor-img-pika {
+
+        display: none;
+    }
+
+     .btn-atrapar {
+
+        font-size: 0.5rem;
+    }
+
+    .list-pedis h2 {
+        font-size: 1rem;
+    }
+
+    .cards {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 750px) and (min-width: 400px)  {
+    .about {
+        height: 200vh;
+        
+    }
+
+    .container-caracteristicas {
+        margin-bottom: 140px;
+    }
+}
+
+@media (max-width: 400px) {
+    .ul-nav{
+        width: 60%;
+        justify-content: space-around;
+    }
+
+    .contenedor-header {
+         margin-top: 80px;
+        flex-wrap: wrap; 
+        align-items: center;   
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .contenedor-imag {
+        width: 60%;
+    
+    }
+
+    .titulo-imag {
+        width: 100%;
+        
+        }
+
+    .titulo-imag h3 {
+        text-align: center;
+    }    
+
+    .about {
+        height: 240vh;
+        box-sizing: border-box;
+    }
+
+    .container-caracteristicas {
+        margin-bottom: 190px;
+    }
+
+    .tittle-about {
+        margin-top: 80px;
+    }
+    
+}
+
+@media (max-width: 350px)  {
+    .list-pedis h2 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .list-pedis {
+        margin-top: 20%; 
+    } 
+
+   
+}
+
+@media (max-width: 850px) {
+
+.about {
+    height: 150vh;
+}
+
+.tittle-about {
+    font-size: 2rem;
+    margin-top: 50px;
+    text-align: center;
+ }
+
+.p-about {
+
+    font-size: 0.9rem;
+    text-align: center;
+
+}
+
+.container-caracteristicas {
+
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-caracteristica {
+margin-top: 20px;
 text-align: center;
 }
+}
+
+@media (max-width: 290px) {
+    .boton-poke {
+        font-size: 0.8rem;
+    }
+}
+
